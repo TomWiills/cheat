@@ -1,0 +1,20 @@
+----investigate---
+git status
+git log
+git diff
+
+# diff between checkouts
+7bed629b5a9864c97a226e448cc0a007cf0a1e6f - new
+fd3ec8c6a7353cde620ed7eeeb6b0e7e7644bbcd - old
+git diff old..new
+git diff fd3ec8c6a7353cde620ed7eeeb6b0e7e7644bbcd..7bed629b5a9864c97a226e448cc0a007cf0a1e6f
+
+
+
+---- submodules-------
+git submodule sync --recursive && git submodule update --recursive --init
+
+
+
+
+

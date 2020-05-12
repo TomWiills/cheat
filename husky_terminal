@@ -1,0 +1,1001 @@
+    2  15/10/19 11:19:41 fish
+    3  17/10/19 15:52:40 sudo shutdown now
+    4  17/10/19 17:08:14 fish
+    5  17/10/19 17:12:08 sudo shutdown now
+    6  18/10/19 10:26:37 fish
+    7  18/10/19 10:25:36 ./run_dev.bash 
+    8  18/10/19 10:18:36 fish
+    9  18/10/19 11:25:23 ./run_dev.bash 
+   10  18/10/19 11:34:16 sudo shutdown now
+   11  18/10/19 11:51:00 fish
+   12  18/10/19 11:47:20 ./run_dev.bash 
+   13  18/10/19 11:47:03 fish
+   14  18/10/19 13:07:31 nano .ssh/authorized_keys 
+   15  18/10/19 13:07:46 ./run_dev.bash 
+   16  18/10/19 13:07:38 fish
+   17  18/10/19 13:10:08 ./run_dev.bash 
+   18  18/10/19 13:18:53 sudo shutdown -r now
+   19  18/10/19 13:22:29 fish
+   20  18/10/19 13:19:52 ./run_dev.bash 
+   21  18/10/19 13:19:45 fish
+   22  18/10/19 13:57:36 date
+   23  18/10/19 14:01:01 sudo timedatectl set-ntp no
+   24  18/10/19 14:01:12 timedatectl
+   25  18/10/19 14:01:48 sudo nano /etc/ntp.conf 
+   26  18/10/19 14:02:21 sudo systemctl restart ntp
+   27  18/10/19 14:02:24 sudo systemctl enable ntp
+   28  18/10/19 14:02:29 sudo systemctl start ntp
+   29  18/10/19 14:02:32 date
+   30  18/10/19 14:02:36 sudo systemctl status ntp -l
+   31  18/10/19 14:02:51 nmap -p0-55000 127.0.0.1
+   32  18/10/19 14:03:09 nmap -p0-55000 --help
+   33  18/10/19 14:03:27 nmap -PU0-55000 127.0.0.1
+   34  18/10/19 14:03:32 sudo nmap -PU0-55000 127.0.0.1
+   35  18/10/19 14:03:38 nmap -p0-55000 --help
+   36  18/10/19 14:03:42 nmap -p0-55000 127.0.0.1
+   37  18/10/19 14:03:51 sudo nmap -PU0-55000 127.0.0.1
+   38  18/10/19 14:03:57 sudo systemctl restart ntp
+   39  18/10/19 14:04:04 sudo nano /etc/hosts
+   40  18/10/19 14:04:17 sudo nano /data/config/csiro.hosts
+   41  18/10/19 14:04:32 sudo nano /etc/ntp.conf 
+   42  18/10/19 14:04:40 sudo nano /data/config/csiro.hosts
+   43  18/10/19 14:05:05 sudo nano /etc/hosts
+   44  18/10/19 14:05:10 sudo systemctl restart ntp
+   45  18/10/19 14:05:13 sudo systemctl status ntp -l
+   46  18/10/19 14:05:20 nmap -p0-55000 127.0.0.1
+   47  18/10/19 14:05:30 sudo nmap -PU0-55000 127.0.0.1
+   48  18/10/19 14:06:44 tmux
+   49  18/10/19 14:06:45 tmux a
+   50  18/10/19 14:06:47 tmux
+   51  23/10/19 11:27:46 fish
+   52  23/10/19 11:31:49 fish
+   53  23/10/19 12:38:58 ./run_dev.bash 
+   54  23/10/19 13:23:54 fish
+   55  23/10/19 13:14:01 fish
+   56  23/10/19 16:17:29 sudo shutdown now
+   57  23/10/19 16:45:47 sudo shutdown -P now
+   58  24/10/19 14:31:25 cat /etc/hosts
+   59  24/10/19 14:31:52 ssh -A aslab@p2-xavier
+   60  24/10/19 14:44:45 cat /etc/hosts
+   61  24/10/19 14:45:48 sudo shutdown -r now
+   62  24/10/19 16:38:52 fish
+   63  25/10/19 09:44:34 sudo shutdown -P now
+   64  25/10/19 10:15:29 ls
+   65  25/10/19 10:15:38 cd subt/
+   66  25/10/19 10:15:39 ls
+   67  25/10/19 10:15:44 cd ..
+   68  25/10/19 10:15:46 ls
+   69  25/10/19 10:17:41 git clone ssh://git@bitbucket.csiro.au:7999/per/perception.git
+   70  25/10/19 10:17:53 ping google
+   71  25/10/19 10:17:56 ping 8.8.8.8
+   72  25/10/19 10:18:06 ping bitbucket.csiro.au
+   73  25/10/19 10:18:25 cat ~/.ssh/id_rsa.pub 
+   74  25/10/19 10:18:48 git clone ssh://git@bitbucket.csiro.au:7999/per/perception.git
+   75  25/10/19 10:18:57 ls
+   76  25/10/19 10:19:01 git clone ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDE2Iagyh8rz8y3zvKp5CGIuyI1QzC932f9NRMRXYiUam/b7830sP3TQcazl746b8seg0N+gwGl17Fs62y5p4MAh2/OIf/Vlg0R4vBGEpXku2xdAu70jK/DP4vVujrI0fy2LIc7VPiCRbKKuct0NDspxE6VmDnKoidCXpv7QTU3VILlClYHf11c4Bbj2LWH2vRpLxetFFTv6HEHN5f28XgBz+QsspQeWQ44c44V9C3dNqO2UMV78SA58BYuref4oy/86nxu8pXCSmeMGTfXJ5V/1i6Seh3kLoaADmKwl/h8S26ig3gA2uKQ++Oe4J0iDxGxaJ/BaJzbyUIRH3law4Dh Victor.Cazalla@data61.csiro.au
+   77  25/10/19 10:19:08 ls
+   78  25/10/19 10:19:14 git clone ssh://git@bitbucket.csiro.au:7999/per/perception.git
+   79  25/10/19 10:20:04 cd .ssh/
+   80  25/10/19 10:20:05 ls
+   81  25/10/19 10:20:15 cat authorized_keys 
+   82  25/10/19 10:20:37 cat id_rsa.pub 
+   83  25/10/19 10:21:58 ssh-keygen 
+   84  25/10/19 10:22:31 ls
+   85  25/10/19 10:22:36 cat id_rsa_wil9e0.pub 
+   86  25/10/19 10:22:56 cd ~
+   87  25/10/19 10:22:59 git clone ssh://git@bitbucket.csiro.au:7999/per/perception.git
+   88  25/10/19 10:23:10 cd .ssh/
+   89  25/10/19 10:23:10 ls
+   90  25/10/19 10:23:12 cat authorized_keys 
+   91  25/10/19 10:23:22 cat id_rsa_hin123.pub 
+   92  25/10/19 10:23:35 cat id_rsa_hin123
+   93  25/10/19 10:23:41 ls
+   94  25/10/19 10:24:00 cat known_hosts 
+   95  25/10/19 10:24:05 ls
+   96  25/10/19 10:24:20 cat id_rsa_wil9e0.pub 
+   97  25/10/19 10:24:49 cd ~
+   98  25/10/19 10:24:51 git clone ssh://git@bitbucket.csiro.au:7999/per/perception.git
+   99  25/10/19 10:25:22 cd -
+  100  25/10/19 10:15:27 fish
+  101  25/10/19 11:12:41 ls
+  102  25/10/19 11:12:43 cd tmp
+  103  25/10/19 11:12:44 ls
+  104  25/10/19 11:12:50 sftp aslab@p2-xavier
+  105  25/10/19 11:13:12 ssh -A aslab@p2-xavier
+  106  25/10/19 11:10:54 ls
+  107  25/10/19 11:49:14 ssh -A aslab@p2-xavier
+  108  25/10/19 13:00:32 systemctl list-dependencies auditd.service 
+  109  25/10/19 13:00:50 systemctl status autonomy
+  110  25/10/19 13:04:15 cd subt/docker/
+  111  25/10/19 13:04:19 ./run_dev.bash 
+  112  25/10/19 13:05:33 sudo systemctl restart Xorg
+  113  25/10/19 13:06:55 systemctl status Xorg
+  114  25/10/19 13:07:03 sudo systemctl restart Xorg
+  115  25/10/19 13:07:58 cd ..
+  116  25/10/19 13:08:02 cd src/subt_launch/config/
+  117  25/10/19 13:08:08 ls
+  118  25/10/19 13:08:10 cd husky/
+  119  25/10/19 13:08:10 ls
+  120  25/10/19 13:09:07 cd v~
+  121  25/10/19 13:09:08 cd ~
+  122  25/10/19 13:09:09 ll
+  123  25/10/19 13:09:14 ll husky_nato_data/
+  124  25/10/19 13:09:16 ll husky_nato_data/record/
+  125  25/10/19 13:09:24 ll husky_nato_data/record/2019_10_25_13_07_18/
+  126  25/10/19 13:01:16 uptime
+  127  25/10/19 13:04:06 ls
+  128  25/10/19 13:04:10 byobu
+  129  25/10/19 17:03:25 ls
+  130  25/10/19 17:03:27 cd /data/
+  131  25/10/19 17:03:28 ls
+  132  25/10/19 17:03:34 cd bagfiles/
+  133  25/10/19 17:03:35 ls
+  134  25/10/19 17:03:36 cd ..
+  135  25/10/19 17:03:41 cd log/
+  136  25/10/19 17:03:42 ls
+  137  25/10/19 17:03:46 cd ..
+  138  25/10/19 17:03:59 ls
+  139  25/10/19 17:04:09 cd su
+  140  25/10/19 17:04:10 cd
+  141  25/10/19 17:04:13 cd subt/
+  142  25/10/19 17:04:14 ls
+  143  25/10/19 17:04:23 cd src/subt_launch/config/record/
+  144  25/10/19 17:04:24 ls
+  145  25/10/19 17:04:27 vim record_autonomy.yaml 
+  146  25/10/19 17:05:56 exit
+  147  28/10/19 12:05:34 cd husky_nato
+  148  28/10/19 12:05:35 cd ..
+  149  28/10/19 12:05:42 cd husky_nato_data/
+  150  28/10/19 12:05:44 ls
+  151  28/10/19 12:05:46 cd record/
+  152  28/10/19 12:05:47 ls
+  153  28/10/19 12:08:52 rosnode list
+  154  31/10/19 11:24:39 sudo ls /etc/network/interfaces.d/
+  155  31/10/19 11:25:51 sudo vim /etc/network/interfaces
+  156  31/10/19 11:35:49 ls
+  157  31/10/19 11:35:55 ping 8.8.8.8
+  158  31/10/19 11:40:26 ls
+  159  31/10/19 11:40:29 cd hosts_master/
+  160  31/10/19 11:40:30 ls
+  161  31/10/19 11:40:37 ./update_hosts.sh 
+  162  31/10/19 11:40:44 git branch
+  163  31/10/19 11:40:53 sudo ./update_hosts.sh 
+  164  31/10/19 11:41:02 vim /etc/hosts
+  165  31/10/19 11:41:56 sudo vim /etc/network/interfaces
+  166  31/10/19 11:42:15 sudo shutdown -r now
+  167  31/10/19 11:43:39 ls
+  168  31/10/19 11:44:14 ping 8.8.8.8
+  169  31/10/19 11:45:15 ifconfig
+  170  31/10/19 11:45:34 sudo systemctl status wifi_connect.service 
+  171  31/10/19 11:45:56 sudo systemctl restart wifi_connect.service 
+  172  31/10/19 11:47:56 ip a
+  173  31/10/19 11:48:29 sudo ifup wlp1s0
+  174  31/10/19 11:48:32 ip a
+  175  31/10/19 11:48:39 sudo ifdown wlp1s0
+  176  31/10/19 11:48:41 ip a
+  177  31/10/19 11:48:43 sudo ifup wlp1s0
+  178  31/10/19 11:48:44 ip a
+  179  31/10/19 11:49:03 sudo systemctl restart wifi_connect.service 
+  180  31/10/19 11:49:26 ip a
+  181  31/10/19 11:49:37 sudo nano /etc/network/interfaces
+  182  31/10/19 11:50:02 ll
+  183  31/10/19 11:50:04 cd wifi_manager/
+  184  31/10/19 11:50:05 ll
+  185  31/10/19 11:47:21 sudo systemctl status wifi_connect.service 
+  186  31/10/19 11:47:31 ping 8.8.8.8
+  187  31/10/19 11:48:55 dmesg -w
+  188  31/10/19 11:50:34 sudo shutdown -r now
+  189  31/10/19 11:51:18 ip a
+  190  31/10/19 11:51:22 ll
+  191  31/10/19 11:51:23 cd wifi_manager/
+  192  31/10/19 11:51:23 ll
+  193  31/10/19 11:51:26 sudo ./install.sh
+  194  31/10/19 11:52:47 sudo ./wifi_manager 
+  195  31/10/19 11:52:51 ll
+  196  31/10/19 11:52:54 sudo ./add_access_point.py 
+  197  31/10/19 11:53:33 cd ..
+  198  31/10/19 11:53:34 ll
+  199  31/10/19 11:54:21 ping 8.8.8.8
+  200  31/10/19 11:54:25 route -n
+  201  31/10/19 11:54:42 cat /etc/network/interfaces
+  202  31/10/19 11:56:01 sudo nano /etc/network/interfaces
+  203  31/10/19 11:57:28 sudo shutdown -r now
+  204  31/10/19 11:58:10 ping 8.8.8.8
+  205  31/10/19 11:58:41 ping www.google.com
+  206  31/10/19 11:58:49 cd subt/
+  207  31/10/19 11:58:49 ls
+  208  31/10/19 11:58:51 git status
+  209  31/10/19 11:58:54 git branch
+  210  31/10/19 11:58:58 git fetch
+  211  31/10/19 11:59:19 sudo vim /etc/resolv.conf 
+  212  31/10/19 11:59:46 ping www.google.com
+  213  31/10/19 12:02:01 sudo vim /etc/resolv.conf 
+  214  31/10/19 12:02:12 ping www.google.com
+  215  31/10/19 12:04:02 sudo vim /etc/network/interfaces
+  216  31/10/19 12:05:15 sudo /etc/init.d/networking restart
+  217  31/10/19 12:05:33 sudo systemctl restart networking.service 
+  218  31/10/19 12:05:41 sudo systemctl status networking.service 
+  219  31/10/19 12:05:48 ping 8.8.8.8
+  220  31/10/19 12:05:54 ping www.google.com
+  221  31/10/19 12:06:08 sudo vim /etc/network/interfaces
+  222  31/10/19 12:06:44 sudo shutdown -r now
+  223  31/10/19 12:08:58 ping www.google.com
+  224  31/10/19 12:09:03 ping 8.8.8.8
+  225  31/10/19 12:09:20 sudo vim /etc/resolvconf/resolv.conf.d
+  226  31/10/19 12:09:44 sudo vim /etc/resolv.conf
+  227  31/10/19 12:10:22 sudo systemctl restart networking.service 
+  228  31/10/19 12:10:42 ping 8.8.8.8
+  229  31/10/19 12:10:47 ping www.google.com
+  230  31/10/19 12:11:20 route -n
+  231  31/10/19 12:11:36 sudo vim /etc/network/interfaces
+  232  31/10/19 12:11:50 sudo systemctl restart networking.service 
+  233  31/10/19 12:12:09 sudo journalctl -f -u networking.service 
+  234  31/10/19 12:12:23 sudo systemctl restart networking.service 
+  235  31/10/19 12:12:25 sudo journalctl -f -u networking.service 
+  236  31/10/19 12:12:36 ifconfig
+  237  31/10/19 12:13:25 sudo vim /etc/network/interfaces
+  238  31/10/19 12:14:01 vim /etc/hosts
+  239  31/10/19 12:14:15 cd hosts_master/
+  240  31/10/19 12:14:20 sudo ./update_hosts.sh 
+  241  31/10/19 12:14:29 sudo vim /etc/hosts
+  242  31/10/19 12:14:39 ping tablet-ub-ph 
+  243  31/10/19 12:14:46 ping google.com
+  244  31/10/19 12:14:57 vim ~/.bashrc
+  245  31/10/19 12:15:24 vim /etc/resolv.conf
+  246  31/10/19 12:17:04 sudo shutdown -r now
+  247  31/10/19 12:30:16 vim /etc/hosts
+  248  31/10/19 12:31:06 sudo gedit /etc/hosts
+  249  31/10/19 12:31:16 cd hosts_master/
+  250  31/10/19 12:31:20 vim update_hosts.sh 
+  251  31/10/19 12:34:10 sudo ./update_hosts.sh
+  252  31/10/19 12:34:41 vim update_hosts.sh
+  253  31/10/19 12:35:12 sudo ./update_hosts.sh
+  254  31/10/19 12:46:10 exit
+  255  31/10/19 12:19:47 route -n
+  256  31/10/19 12:19:55 vim /etc/hosts
+  257  31/10/19 12:21:47 cd hosts_master/
+  258  31/10/19 12:21:53 sudo ./update_hosts.sh 
+  259  31/10/19 12:22:06 sudo systemctl restart networking
+  260  31/10/19 12:22:12 vim /etc/hosts
+  261  31/10/19 12:23:37 ping 8.8.8.8
+  262  31/10/19 12:23:42 ping www.google.com
+  263  31/10/19 12:23:55 vim /etc/resolv.conf
+  264  31/10/19 12:24:05 sudo vim /etc/resolv.conf
+  265  31/10/19 12:24:37 ping www.google.com
+  266  31/10/19 12:25:48 ping 8.8.8.8
+  267  31/10/19 12:25:52 ping tablet-ub-ph 
+  268  31/10/19 12:25:57 ping darpa-base 
+  269  31/10/19 12:26:16 sudo systemctl restart networking
+  270  31/10/19 12:26:47 cd ..
+  271  31/10/19 12:26:56 vim /etc/hosts
+  272  31/10/19 12:27:20 vim /etc/resolv.conf
+  273  31/10/19 12:27:29 ping www.google.com
+  274  31/10/19 12:27:37 vim /etc/resolv.conf
+  275  31/10/19 12:28:19 sudo vim /etc/resolv.conf
+  276  31/10/19 12:28:33 ping www.google.com
+  277  31/10/19 12:29:06 vim /etc/hosts
+  278  31/10/19 12:29:29 sudo vim /data/config/csiro.hosts
+  279  31/10/19 12:35:23 cd subt/
+  280  31/10/19 12:35:25 git status
+  281  31/10/19 12:36:19 git dif
+  282  31/10/19 12:36:21 git diff
+  283  31/10/19 12:36:43 git branch
+  284  31/10/19 12:36:51 git status
+  285  31/10/19 12:37:13 git checkout -b husky_changes
+  286  31/10/19 12:37:25 git diff docker/run_dev.bash
+  287  31/10/19 12:37:48 git status
+  288  31/10/19 12:38:11 git diff src/subt_launch/CMakeLists.txt
+  289  31/10/19 12:38:31 git diff src/subt_launch/config/record/record_autonomy.yaml
+  290  31/10/19 12:38:52 git status
+  291  31/10/19 12:38:59 cd src/behaviour_lpp/
+  292  31/10/19 12:39:00 git status
+  293  31/10/19 12:39:04 cd behaviour_decollide/
+  294  31/10/19 12:39:06 git status
+  295  31/10/19 12:39:08 git diff
+  296  31/10/19 12:39:16 cd ..
+  297  31/10/19 12:39:19 cd behaviour_
+  298  31/10/19 12:39:22 cd behaviour_decollide/
+  299  31/10/19 12:39:24 git status
+  300  31/10/19 12:39:41 git checkout -b bugfix/odom_timeout
+  301  31/10/19 12:39:44 git commit -a
+  302  31/10/19 12:39:53 git branch
+  303  31/10/19 12:39:59 cd ..
+  304  31/10/19 12:40:00 git status
+  305  31/10/19 12:40:04 cd behaviour_decollide/
+  306  31/10/19 12:40:08 git branch
+  307  31/10/19 12:40:13 git checkout feature/behaviour_decollide 
+  308  31/10/19 12:40:14 cd ..
+  309  31/10/19 12:40:15 git status
+  310  31/10/19 12:40:22 cd ..
+  311  31/10/19 12:40:23 git status
+  312  31/10/19 12:40:31 git commit -a
+  313  31/10/19 12:40:48 git branch
+  314  31/10/19 12:40:53 git push origin husky_changes 
+  315  31/10/19 12:41:04 git fetch
+  316  31/10/19 12:41:16 cd ..
+  317  31/10/19 12:41:26 cd .ssh/
+  318  31/10/19 12:41:27 ls
+  319  31/10/19 12:42:50 cd ..
+  320  31/10/19 12:43:28 ssh-keygen -t rsa -C "Fletcher.Talbot@data61.csiro.au"
+  321  31/10/19 12:44:04 ls
+  322  31/10/19 12:44:14 mv id_rsa_tal058* .ssh
+  323  31/10/19 12:44:17 cd .ssh/
+  324  31/10/19 12:44:18 ls
+  325  31/10/19 12:44:29 vim id_rsa
+  326  31/10/19 12:44:33 vim id_rsa_tal058
+  327  31/10/19 12:44:59 scp id_rsa_tal058 tal058@proff-ph:/home/tal058/logs
+  328  31/10/19 12:46:01 scp id_rsa_tal058 tal058@tablet-ub-ph:/home/tal058
+  329  31/10/19 12:48:04 scp id_rsa_tal058.pub tal058@tablet-ub-ph:/home/tal058
+  330  31/10/19 12:48:58 cd
+  331  31/10/19 12:48:59 cd subt/
+  332  31/10/19 12:49:02 git fetch
+  333  31/10/19 12:50:27 git config --get user
+  334  31/10/19 12:53:13 exit
+  335  31/10/19 12:53:20 cd subt
+  336  31/10/19 12:53:22 git fetch
+  337  31/10/19 12:53:30 cd ..
+  338  31/10/19 12:53:31 ls
+  339  31/10/19 12:53:39 .ssh
+  340  31/10/19 12:53:41 cd .ssh
+  341  31/10/19 12:53:43 ls
+  342  31/10/19 12:53:49 vim authorized_keys 
+  343  31/10/19 12:53:57 vim known_hosts 
+  344  31/10/19 12:54:21 ping www.google.com
+  345  31/10/19 12:54:42 vim known_hosts 
+  346  31/10/19 12:54:53 vim authorized_keys 
+  347  31/10/19 12:55:34 git config --global user.name 
+  348  31/10/19 12:56:48 git config --global user.name "Talbot, Fletcher (Data61, Pullenvale)"
+  349  31/10/19 12:57:03 git config --global user.email "Fletcher.Talbot@data61.csiro.au"
+  350  31/10/19 12:57:06 git config --global user.name 
+  351  31/10/19 12:57:09 git config --global user.email
+  352  31/10/19 12:57:14 cd ..
+  353  31/10/19 12:57:16 cd subt/
+  354  31/10/19 12:57:18 git fetch
+  355  31/10/19 12:57:32 git config --global user.name ""
+  356  31/10/19 12:57:37 git config --global user.name
+  357  31/10/19 12:57:42 git config --global user.email ""
+  358  31/10/19 12:58:44 ssh -T hg@bitbucket.com
+  359  31/10/19 13:01:21 ssh -T git@bitbucket.org
+  360  31/10/19 13:01:32 cd 
+  361  31/10/19 13:01:33 cd .ssh/
+  362  31/10/19 13:01:34 ls
+  363  31/10/19 13:01:47 rm id_rsa_tal058.pub 
+  364  31/10/19 13:01:49 rm id_rsa_tal058
+  365  31/10/19 13:02:04 nano id_rsa.pub 
+  366  31/10/19 13:03:21 vim id_rsa.pub 
+  367  31/10/19 13:03:45 ssh-keygen -t rsa -C "Fletcher.Talbot@data61.csiro.au"
+  368  31/10/19 13:04:12 ls
+  369  31/10/19 13:04:18 vim id_rsa_tal058
+  370  31/10/19 13:04:22 vim id_rsa_tal058.pub 
+  371  31/10/19 13:05:53 scp id_rsa_tal058.pub tal058@tablet-ub-ph:/home/tal058
+  372  31/10/19 13:06:45 exit
+  373  31/10/19 13:40:18 ping husky-ph 
+  374  31/10/19 13:40:25 exit
+  375  31/10/19 14:31:01 sudo vim /etc/hosts
+  376  31/10/19 14:31:29 ping tablet-ub-ph 
+  377  31/10/19 14:31:33 exit
+  378  31/10/19 14:32:01 rostopic list
+  379  31/10/19 14:32:21 sudo vim /data/config/csiro.hosts
+  380  31/10/19 14:33:55 sudo shutdown -r now
+  381  31/10/19 13:06:51 cd subt
+  382  31/10/19 13:06:53 git fetch
+  383  31/10/19 13:10:20 ssh -T git@bitbucket.csiro.au
+  384  31/10/19 13:11:27 git config --get remote.origin.url
+  385  31/10/19 13:12:12 ssh -T git@bitbucket.csiro.au
+  386  31/10/19 13:12:44 ssh -T tal058@bitbucket.csiro.au
+  387  31/10/19 13:15:22 ssh-add ~/.ssh/id_rsa_tal058
+  388  31/10/19 13:15:28 git fetch
+  389  31/10/19 13:15:40 git branch
+  390  31/10/19 13:15:45 git push origin husky_changes 
+  391  31/10/19 13:22:57 git pull
+  392  31/10/19 13:23:01 git checkout husky_changes 
+  393  31/10/19 13:23:03 git pull
+  394  31/10/19 13:23:08 git pull origin husky_changes 
+  395  31/10/19 13:23:11 git checkout husky_changes 
+  396  31/10/19 13:23:13 git pull
+  397  31/10/19 13:23:17 ls
+  398  31/10/19 13:23:19 git branch
+  399  31/10/19 13:23:21 git log
+  400  31/10/19 13:23:28 git branch
+  401  31/10/19 13:23:47 git checkout -b husky/beahviour_path_follow
+  402  31/10/19 13:23:51 git branch
+  403  31/10/19 13:24:03 cd src/subt_launch/
+  404  31/10/19 13:24:25 cd config/
+  405  31/10/19 13:24:26 ls
+  406  31/10/19 13:24:44 cp kitten/kitten_behaviour_path_follow.yaml husky/
+  407  31/10/19 13:24:46 cd husky/
+  408  31/10/19 13:24:46 ls
+  409  31/10/19 13:24:58 mv kitten_behaviour_path_follow.yaml husky_behaviour_path_follow.yaml
+  410  31/10/19 13:24:58 ls
+  411  31/10/19 13:25:09 vim husky_behaviour_compositor.yaml 
+  412  31/10/19 13:26:14 cd ..
+  413  31/10/19 13:26:18 cd docker/
+  414  31/10/19 13:26:25 cd ..
+  415  31/10/19 13:26:30 git submodule sync
+  416  31/10/19 13:26:36 git submodule update --init --recursive
+  417  31/10/19 13:26:42 catkin build
+  418  31/10/19 13:26:52 cd docker/
+  419  31/10/19 13:26:56 ./run_dev.bash 
+  420  31/10/19 13:34:12 ping husky-ph
+  421  31/10/19 13:34:20 vim /etc/hosts
+  422  31/10/19 13:34:51 sudo vim /etc/hosts
+  423  31/10/19 13:35:06 vim /data/config/csiro.hosts
+  424  31/10/19 13:35:27 sudou vim /data/config/csiro.hosts
+  425  31/10/19 13:35:31 sudo vim /data/config/csiro.hosts
+  426  31/10/19 13:35:40 ./run_dev.bash 
+  427  31/10/19 13:39:10 vim /etc/hosts
+  428  31/10/19 13:39:25 sudo vim /etc/hosts
+  429  31/10/19 13:39:34 ./run_dev.bash 
+  430  31/10/19 13:43:22 vim /etc/hosts
+  431  31/10/19 13:43:57 sudo vim /etc/hosts
+  432  31/10/19 13:44:13 sudo vim /data/config/csiro.hosts
+  433  31/10/19 13:44:21 ./run_dev.bash 
+  434  31/10/19 13:51:51 rostopic list
+  435  31/10/19 13:52:02 sudo systemctl status robot_manager.service 
+  436  31/10/19 13:52:15 sudo systemctl restart robot_manager.service 
+  437  31/10/19 13:52:18 sudo systemctl status robot_manager.service 
+  438  31/10/19 13:52:28 rostopic list
+  439  31/10/19 13:54:35 ./run_dev.bash 
+  440  31/10/19 13:55:28 cd ..
+  441  31/10/19 13:55:54 cd src/behaviour_lpp/behaviour_path_follow/
+  442  31/10/19 13:55:58 git branch
+  443  31/10/19 13:56:46 git fetch
+  444  31/10/19 13:56:52 git checkout feature/cost_map_repulsion 
+  445  31/10/19 13:56:54 cd ..
+  446  31/10/19 13:56:59 cd ../docker/
+  447  31/10/19 13:57:05 ./run_dev.bash 
+  448  31/10/19 14:35:15 sudo vim /etc/hosts
+  449  31/10/19 14:35:28 cd subt/docker/
+  450  31/10/19 14:36:20 sudo systemctl status robot_manager.service 
+  451  31/10/19 14:36:33 rostopic list
+  452  31/10/19 14:36:36 exit
+  453  31/10/19 14:39:42 cd subt/docker/
+  454  31/10/19 14:40:10 rostopic list
+  455  31/10/19 14:40:19 cd subt/docker/
+  456  31/10/19 14:40:21 ./run_dev.bash 
+  457  31/10/19 16:10:41 gdb --help
+  458  31/10/19 16:10:58 ps -A grep ohm_mapping
+  459  31/10/19 16:11:05 ps -A | grep ohm_mapping
+  460  31/10/19 16:11:37 gdb --pid=16673
+  461  31/10/19 16:11:53 sudo gdb --pid=16673
+  462  31/10/19 16:06:06 gdb
+  463  31/10/19 15:13:10 rostopic list
+  464  31/10/19 15:13:59 cd subt/docker/
+  465  31/10/19 15:14:06 ./run_dev.bash 
+  466  01/11/19 12:05:19 ping www.google.com
+  467  01/11/19 12:05:37 vim /etc/resolv.conf
+  468  01/11/19 12:05:42 sudo vim /etc/resolv.conf
+  469  01/11/19 12:06:13 ping www.google.com
+  470  01/11/19 12:06:18 cd subt/
+  471  01/11/19 12:52:55 git status
+  472  01/11/19 12:53:01 cd src/behaviour_lpp/
+  473  01/11/19 12:53:04 git status
+  474  01/11/19 12:53:07 cd behaviour_path_follow/
+  475  01/11/19 12:53:08 git status
+  476  01/11/19 12:53:10 cd ..
+  477  01/11/19 12:53:18 git fetch
+  478  01/11/19 12:53:54 git checkout release/2019-11-1 
+  479  01/11/19 12:53:58 git submoudle sync
+  480  01/11/19 12:54:01 git submodule sync
+  481  01/11/19 12:54:07 git submodule update --init --recurisve
+  482  01/11/19 12:54:10 git submodule update --init --recursive
+  483  01/11/19 12:54:15 catkin build
+  484  01/11/19 12:54:17 cd docker/
+  485  01/11/19 12:54:20 ./run_dev.bash 
+  486  01/11/19 13:00:04 git status
+  487  01/11/19 13:00:08 git branch
+  488  01/11/19 13:00:26 git pull
+  489  01/11/19 13:00:32 git submodule sync
+  490  01/11/19 13:00:40 git submodule update --init --recursive
+  491  01/11/19 13:00:47 ./run_dev.bash 
+  492  01/11/19 13:05:37 exit
+  493  01/11/19 13:21:39 docker ps
+  494  01/11/19 13:21:49 fish
+  495  01/11/19 13:11:06 rostopic hz /r2/slam/odom/frames 
+  496  01/11/19 13:11:13 cd subt/docker/
+  497  01/11/19 13:11:15 cd ..
+  498  01/11/19 13:11:22 ls
+  499  01/11/19 13:11:28 source devel/setup.bash 
+  500  01/11/19 13:11:31 rostopic hz /r2/slam/odom/frames 
+  501  01/11/19 13:11:40 cd docker/
+  502  01/11/19 13:11:44 ./run_dev.bash 
+  503  01/11/19 13:25:14 ip a
+  504  01/11/19 13:27:23 exit
+  505  01/11/19 13:41:16 cd subt/
+  506  01/11/19 13:41:38 vim src/subt_launch/launch/autonomy.launch 
+  507  01/11/19 13:45:18 exity
+  508  01/11/19 13:45:19 exit
+  509  01/11/19 14:48:13 rosnode list
+  510  01/11/19 14:48:35 rostopic echo /joy_teleop/
+  511  01/11/19 14:48:38 rostopic echo /joy_teleop/cmd_vel 
+  512  01/11/19 14:55:32 exit
+  513  01/11/19 15:11:20 ps -eaf | grep -i xorg
+  514  01/11/19 15:11:26 sudo journalctl -f -u Xorg
+  515  01/11/19 15:11:40 sudo systemctl restart Xorg
+  516  01/11/19 15:11:41 sudo journalctl -f -u Xorg
+  517  01/11/19 15:13:03 exit
+  518  01/11/19 15:00:10 rostopic hz /r2/ohm/costmap2d
+  519  01/11/19 15:01:19 rosnode list
+  520  01/11/19 15:01:23 date
+  521  01/11/19 15:01:58 rosnode info /r2/mesh_to_costmap2d 
+  522  01/11/19 15:02:09 rostopic hz /r2/heightmap 
+  523  01/11/19 15:02:18 cd subt/docker/
+  524  01/11/19 15:02:21 ./run_dev.bash 
+  525  01/11/19 15:05:48 docker ps
+  526  01/11/19 15:06:00 docker exec -it -e TERM 3378ff9eda62 /bin/bash
+  527  01/11/19 15:14:13 exit
+  528  04/11/19 14:51:45 fish
+  529  04/11/19 14:31:28 fish
+  530  04/11/19 18:43:59 sudo shutdown -P now
+  531  05/11/19 09:46:56 fish
+  532  05/11/19 09:45:24 fish
+  533  05/11/19 11:12:05 sudo shutdown -P now
+  534  05/11/19 14:27:02 fish
+  535  05/11/19 14:27:42 fish
+  536  05/11/19 14:27:08 fish
+  537  05/11/19 17:30:27 sudo shutdown -P now
+  538  07/11/19 09:39:38 cd subt/
+  539  07/11/19 09:39:45 git status
+  540  07/11/19 09:39:50 git diff
+  541  07/11/19 09:40:19 git checkout src/subt_launch/config/husky/husky_behaviour_compositor.yaml
+  542  07/11/19 09:40:28 cd src/behaviour_lpp/
+  543  07/11/19 09:40:29 git status
+  544  07/11/19 09:40:31 git diff
+  545  07/11/19 09:40:51 git checkout behaviour_lpp/launch/behaviour_lpp.launch
+  546  07/11/19 09:40:53 git status
+  547  07/11/19 09:40:54 cd ..
+  548  07/11/19 09:40:57 git status
+  549  07/11/19 09:41:03 git checkout husky/master 
+  550  07/11/19 09:41:06 git pull
+  551  07/11/19 09:41:10 ping 8.8.8.8
+  552  07/11/19 09:41:20 vim /etc/resolv.conf
+  553  07/11/19 09:41:24 sudo vim /etc/resolv.conf
+  554  07/11/19 09:41:43 ping www.google.com
+  555  07/11/19 09:41:46 git pull
+  556  07/11/19 09:43:05 git submodule sync
+  557  07/11/19 09:43:10 git submodule update --init --recursive
+  558  07/11/19 09:43:14 cd docker/
+  559  07/11/19 09:43:17 ./run_dev.bash 
+  560  07/11/19 09:54:46 git log
+  561  07/11/19 09:54:51 ./run_dev.bash 
+  562  07/11/19 10:29:19 rostopic echo /r2/behaviour_compositor/state/active_behaviour
+  563  07/11/19 10:29:43 rostopic echo /r2/behaviour_compositor/active_behaviour
+  564  07/11/19 10:30:19 rostopic echo /husky/cmd_vel_stamped 
+  565  07/11/19 10:30:24 rostopic echo /husky/cmd_vel
+  566  07/11/19 10:30:34 rosnode info /twist_mux 
+  567  07/11/19 10:30:56 rostopic echo /cmd_vel 
+  568  07/11/19 10:45:52 exit
+  569  07/11/19 11:07:12 date
+  570  07/11/19 10:47:43 cd subt/
+  571  07/11/19 10:47:53 vim src/subt_launch/launch/autonomy.launch 
+  572  07/11/19 10:48:20 cd src/nav_backpack/
+  573  07/11/19 10:48:21 ls
+  574  07/11/19 10:48:24 cd launch/
+  575  07/11/19 10:48:28 vim nav_autonomy.launch 
+  576  07/11/19 10:50:56 vim ../../subt_launch/launch/autonomy.launch 
+  577  07/11/19 10:52:00 vim nav_autonomy.launch
+  578  07/11/19 11:33:10 cd subt/src/behaviour_lpp/behaviour_astar/src/
+  579  07/11/19 11:33:11 ls
+  580  07/11/19 11:33:17 vim BehaviourAStar.cpp 
+  581  07/11/19 10:25:15 cd subt/
+  582  07/11/19 10:25:18 cd docker/
+  583  07/11/19 10:25:20 ./run_dev.bash 
+  584  07/11/19 13:35:51 sudo ntpq -p
+  585  07/11/19 13:36:11 exit
+  586  07/11/19 13:05:24 cd subt/docker/
+  587  07/11/19 13:05:28 ./run_dev.bash 
+  588  07/11/19 13:23:59 sudo ntpdate -q darpa_base
+  589  07/11/19 13:24:39 cd ..
+  590  07/11/19 13:24:39 ls
+  591  07/11/19 13:24:57 cd src/
+  592  07/11/19 13:24:58 ls
+  593  07/11/19 13:27:35 cd ../docker/
+  594  07/11/19 13:27:37 ./run_dev.bash 
+  595  07/11/19 13:58:17 sudo shutdown -r now
+  596  07/11/19 13:59:21 cd subt/docker/
+  597  07/11/19 13:59:24 ./run_dev.bash 
+  598  07/11/19 14:14:11 sudo systemctl restart autonomy
+  599  07/11/19 14:14:27 sudo shutdown -r now
+  600  08/11/19 11:35:54 cd subt/src/ohm
+  601  08/11/19 11:35:58 git log
+  602  08/11/19 11:55:39 fish
+  603  08/11/19 14:01:58 cd wifi_manager/
+  604  08/11/19 14:02:04 sudo ./add_access_point.py 
+  605  08/11/19 14:02:22 sudo ./add_access_point.py /data/config
+  606  08/11/19 14:03:23 fish
+  607  08/11/19 15:12:26 ping p2-xavier 
+  608  08/11/19 15:12:33 exit
+  609  08/11/19 15:15:44 cd subt/docker/
+  610  08/11/19 15:15:46 ./run_dev.bash 
+  611  08/11/19 15:21:54 exit
+  612  08/11/19 15:41:22 htop[
+  613  08/11/19 15:41:24 htop
+  614  08/11/19 15:43:07 exit
+  615  08/11/19 15:49:47 htop
+  616  08/11/19 15:50:16 dmsg | grep -i heat
+  617  08/11/19 15:50:21 dmesg | grep -i heat
+  618  08/11/19 15:50:24 dmesg | grep -i temp
+  619  08/11/19 15:50:28 dmesg | grep -i throttle
+  620  08/11/19 15:50:52 htop
+  621  08/11/19 15:53:12 ll /sys
+  622  08/11/19 15:53:19 ll /sys/class
+  623  08/11/19 15:53:23 ll /sys/class/thermal
+  624  08/11/19 15:53:28 ll /sys/class/thermal/thermal_zone0
+  625  08/11/19 15:53:29 ll /sys/class/thermal/thermal_zone0/
+  626  08/11/19 15:53:33 ll /sys/class/thermal/thermal_zone0/temp
+  627  08/11/19 15:53:34 cat /sys/class/thermal/thermal_zone0/temp
+  628  08/11/19 15:53:37 cat /sys/class/thermal/thermal_zone1/temp
+  629  08/11/19 15:53:40 cat /sys/class/thermal/thermal_zone2/temp
+  630  08/11/19 15:53:42 cat /sys/class/thermal/thermal_zone3/temp
+  631  08/11/19 15:53:44 cat /sys/class/thermal/thermal_zone4/temp
+  632  08/11/19 15:54:11 rostopic echo /status
+  633  08/11/19 15:54:37 rostopic list
+  634  08/11/19 15:54:48 rostopic echo /r2/temp_sensor
+  635  08/11/19 15:55:01 ll /dev/serial
+  636  08/11/19 15:55:03 ll /dev/serial/
+  637  08/11/19 15:43:40 cd subt/docker/
+  638  08/11/19 15:43:44 ./run_dev.bash 
+  639  08/11/19 17:30:56 sudo shutdown -P now
+  640  11/11/19 10:15:33 fish
+  641  13/11/19 15:49:20 sudo shutdown -r now
+  642  14/11/19 10:34:38 fish
+  643  14/11/19 10:39:42 fish
+  644  14/11/19 17:51:07 cd husky_ws
+  645  14/11/19 17:51:17 source /opt/ros/kinetic/setup.bash
+  646  14/11/19 17:51:19 catkin config
+  647  14/11/19 17:51:21 catkin build
+  648  14/11/19 17:54:21 sudo systemctl status robot_manager
+  649  14/11/19 17:54:28 sudo systemctl start robot_manager
+  650  14/11/19 17:54:30 sudo systemctl status robot_manager
+  651  14/11/19 17:54:38 sudo journalctl -f -u robot_manager
+  652  14/11/19 17:54:52 rosnode list
+  653  14/11/19 17:55:07 grep -Ril husky_node src
+  654  14/11/19 17:55:52 rosnode info /husky_node
+  655  14/11/19 17:56:04 ps -eaf | grep -i husky_node
+  656  14/11/19 17:56:17 less /data/log/fc832b2c-06b3-11ea-844e-003018a1ec94/husky_node-3.log
+  657  14/11/19 17:56:25 ll /data/log
+  658  14/11/19 17:56:29 ll /data/log/latest/
+  659  14/11/19 17:56:35 ll /data/log/latest/husky_node-3-stdout.log 
+  660  14/11/19 17:56:38 less /data/log/latest/husky_node-3-stdout.log 
+  661  14/11/19 18:05:50 rosnode info /husky_node
+  662  14/11/19 18:05:56 rosparam get /husky_node
+  663  14/11/19 18:10:50 sudo systemctl stop robot_manager
+  664  14/11/19 18:13:07 less /data/log/latest/husky_node-3-stdout.log 
+  665  14/11/19 18:29:30 fish
+  666  14/11/19 18:36:25 catkin build
+  667  14/11/19 18:36:59 sudo systemctl start robot_manager
+  668  14/11/19 18:37:05 less /data/log/latest/husky_node-3-stdout.log 
+  669  14/11/19 18:37:12 less --help
+  670  14/11/19 18:37:24 less /data/log/latest/husky_node-3-stdout.log 
+  671  14/11/19 18:37:56 sudo systemctl stop robot_manager
+  672  14/11/19 18:38:44 fish
+  673  14/11/19 18:43:10 catkin build
+  674  14/11/19 19:07:49 python
+  675  14/11/19 19:11:22 sudo shutdown -P now
+  676  14/11/19 10:39:10 ./run_dev.bash 
+  677  15/11/19 10:41:09 fish
+  678  15/11/19 13:11:30 exit
+  679  15/11/19 13:56:14 fish
+  680  15/11/19 14:32:51 sudo shutdwon -r now
+  681  15/11/19 14:33:24 sudo shutdown -r now
+  682  15/11/19 16:02:56 fish
+  683  15/11/19 15:13:41 sudo vim /etc/hosts
+  684  15/11/19 15:19:29 cd subt/docker/
+  685  15/11/19 15:19:33 ./run_dev.bash 
+  686  18/11/19 13:35:41 fish
+  687  18/11/19 14:12:37 cd subt/docker/
+  688  18/11/19 14:12:40 ./run_dev.bash 
+  689  18/11/19 10:26:02 fish
+  690  18/11/19 10:34:43 cd husky_ws
+  691  18/11/19 10:34:49 source /opt/ros/kinetic/setup.bash
+  692  18/11/19 10:34:52 catkin config
+  693  18/11/19 10:34:54 catkin build
+  694  18/11/19 10:42:04 fish
+  695  18/11/19 13:29:57 cd husky_nato_data/
+  696  18/11/19 13:29:58 ls
+  697  18/11/19 13:29:59 cd record/
+  698  18/11/19 13:30:00 ls
+  699  18/11/19 14:49:59 fish
+  700  18/11/19 15:26:36 fihs
+  701  18/11/19 15:26:38 fish
+  702  19/11/19 21:09:36 fihs
+  703  19/11/19 21:09:37 fish
+  704  19/11/19 22:05:16 cd husky_ws
+  705  19/11/19 22:05:24 source /opt/ros/kinetic/setup.bash
+  706  19/11/19 22:05:26 catkin build
+  707  19/11/19 22:05:46 rm -rf src/rasg_nav_msgs/
+  708  19/11/19 22:05:47 catkin build
+  709  19/11/19 22:06:14 fish
+  710  22/11/19 14:01:37 tmux a
+  711  22/11/19 14:01:38 tmux
+  712  22/11/19 14:02:14 fish
+  713  22/11/19 14:01:39 cd subt
+  714  22/11/19 14:01:41 cd docker
+  715  22/11/19 14:01:43 docker ps
+  716  22/11/19 14:01:48 ./run_dev.bash 
+  717  22/11/19 14:52:07 fish
+  718  25/11/19 13:39:40 sudo systemctl stop slam
+  719  25/11/19 13:39:57 ssh -A aslab@p1-xavier 
+  720  25/11/19 13:40:06 exit
+  721  25/11/19 13:41:11 ls
+  722  25/11/19 13:41:18 cd husky_nato_data/
+  723  25/11/19 13:41:19 ls
+  724  25/11/19 13:41:21 cd record/
+  725  25/11/19 13:41:21 ls
+  726  25/11/19 13:42:05 exit
+  727  02/12/19 11:47:14 fish
+  728  02/12/19 10:51:27 fish
+  729  02/12/19 13:59:06 sudo shutdown -r now
+  730  02/12/19 14:04:51 ./run_dev.bash 
+  731  02/12/19 14:05:04 fish
+  732  02/12/19 14:04:42 fish
+  733  02/12/19 14:08:29 cd subt/docker
+  734  02/12/19 14:08:31 tmux a
+  735  02/12/19 14:08:32 tmux
+  736  02/12/19 14:29:10 fish
+  737  02/12/19 14:28:43 fish
+  738  02/12/19 14:27:59 ./run_bash
+  739  02/12/19 14:28:02 ./run_dev.bash 
+  740  02/12/19 14:27:37 cd subt/
+  741  02/12/19 14:27:40 cd ~
+  742  02/12/19 14:27:42 cd subt/docker/
+  743  02/12/19 14:27:44 tmux a
+  744  02/12/19 14:27:47 tmux
+  745  02/12/19 15:15:23 ./run_dev.bash 
+  746  02/12/19 15:14:39 fish
+  747  02/12/19 15:44:12 cd subt/docker
+  748  02/12/19 15:44:17 ./run_dev.bash 
+  749  02/12/19 15:44:08 tmux a
+  750  02/12/19 15:44:09 tmux
+  751  02/12/19 16:19:43 fish
+  752  02/12/19 16:22:46 cd subt/docker/
+  753  02/12/19 16:22:49 ./run_dev.bash 
+  754  02/12/19 17:12:39 sudo shutdown -P now
+  755  02/12/19 16:22:39 fish
+  756  03/12/19 09:42:02 cd subt/docker
+  757  03/12/19 09:42:05 ./run_dev.bash 
+  758  03/12/19 09:41:59 tmux a
+  759  03/12/19 09:42:00 tmux
+  760  03/12/19 09:42:57 fish
+  761  03/12/19 09:53:47 sudo shutdown -P now
+  762  03/12/19 10:08:07 rostopic pub /r2/gui_ems/error_reset std_msgs/Bool "data: true" 
+  763  03/12/19 10:08:17 rostopic echo /r2/gui_ems/error
+  764  03/12/19 10:08:30 fish
+  765  19/12/19 10:43:10 rostopic list
+  766  19/12/19 10:49:34 exit
+  767  19/12/19 10:59:52 rostopic list
+  768  19/12/19 11:11:23 kjdfhksfd
+  769  19/12/19 11:11:27 exit
+  770  19/12/19 11:47:56 ./run_dev.bash
+  771  19/12/19 12:27:30 fsfsdf
+  772  19/12/19 12:27:31 sdfsdfsd
+  773  19/12/19 12:27:31 sdf
+  774  19/12/19 12:27:31 sdfsdf
+  775  19/12/19 13:22:40 ping p2-xavier
+  776  19/12/19 13:33:31 clear
+  777  19/12/19 13:35:11 exit
+  778  19/12/19 13:20:10 nano .bashrc
+  779  19/12/19 13:26:53 ~/subt/docker/
+  780  19/12/19 13:27:14 cd ~/subt/docker/
+  781  19/12/19 13:27:19 tumx
+  782  19/12/19 13:27:24 tmux
+  783  19/12/19 13:27:35 ./run_dev.bash
+  784  19/12/19 13:37:43 echo $ROS_MASTER_URI
+  785  19/12/19 13:40:55 sudo shutdown -h now
+  786  19/12/19 16:11:15 ./run_dev.bash
+  787  19/12/19 16:11:35 cd subt/docker/
+  788  19/12/19 16:11:37 ./run_dev.bash
+  789  19/12/19 16:49:28 shutdown -h now
+  790  19/12/19 16:49:36 sudo shutdown -h now
+  791  20/12/19 14:54:08 cd subt/docker/
+  792  20/12/19 14:54:10 ./run_dev.bash
+  793  20/12/19 15:14:27 sudo shutdown -h now
+  794  02/01/20 11:02:37 ./run_dev.bash
+  795  02/01/20 11:02:45 cd subt/docker/
+  796  02/01/20 11:02:47 ./run_dev.bash
+  797  02/01/20 11:18:20 date
+  798  02/01/20 11:24:06 ./run_dev.bash
+  799  02/01/20 11:28:56 date
+  800  02/01/20 11:36:46 sudo date +%T -s "11:37:00"
+  801  02/01/20 11:37:24 sudo date +%T -s "11:38:00"
+  802  02/01/20 11:38:03 date
+  803  02/01/20 11:38:19 ./run_dev.bash
+  804  02/01/20 11:43:03 sudo shutdown -h now
+  805  02/01/20 11:44:56 cd subt/docker/
+  806  02/01/20 11:44:59 ./run_dev.bash
+  807  02/01/20 11:45:52 date
+  808  02/01/20 11:46:16 sudo date +%T -s "11:47:00"
+  809  02/01/20 11:47:15 sudo date +%T -s "11:47:20"
+  810  02/01/20 11:47:23 date
+  811  02/01/20 12:14:20 sudo hwclock --show
+  812  02/01/20 12:16:21 ./run_dev.bash
+  813  02/01/20 12:20:06 sudo shutdown -h now
+  814  02/01/20 14:01:51 sudo hwclock --show
+  815  02/01/20 14:02:42 sudo hwclock --set --date "01/02/2020 13:50:00"
+  816  02/01/20 14:02:49 sudo hwclock --show
+  817  02/01/20 14:03:26 sudo hwclock --set --date "01/02/2020 14:04:10"
+  818  02/01/20 14:03:29 sudo hwclock --show
+  819  02/01/20 14:08:12 sudo hwclock --debug
+  820  02/01/20 14:10:46 date
+  821  02/01/20 14:10:48 sudo hwclock --debug
+  822  02/01/20 14:26:17 date
+  823  02/01/20 14:27:36 sudo date +%T -s "14:27:20"
+  824  02/01/20 14:27:22 date
+  825  02/01/20 14:27:35 sudo date +%T -s "14:27:40"
+  826  02/01/20 14:27:42 date
+  827  02/01/20 14:27:55 sudo hwclock -w
+  828  02/01/20 14:28:01 sudo hwclock --debug
+  829  02/01/20 14:28:43 sudo hwclock
+  830  02/01/20 14:29:20 sudo hwclock --set --date "01/02/2020 14:30:30"
+  831  02/01/20 14:29:33 sudo hwclock
+  832  02/01/20 14:29:49 sudo hwclock debug
+  833  02/01/20 14:29:54 sudo hwclock --debug
+  834  02/01/20 14:32:43 cd subt/docker/
+  835  02/01/20 14:32:50 ./run_dev.bash
+  836  02/01/20 14:39:51 cd/etc
+  837  02/01/20 14:39:54 cd /etc
+  838  02/01/20 14:40:02 sudo nano adjtime
+  839  02/01/20 14:48:49 sudo shutdown -h now
+  840  02/01/20 16:27:56 ux ls
+  841  02/01/20 16:28:00 tmux ls
+  842  02/01/20 16:29:41 ./run_dev.bash 
+  843  02/01/20 16:31:49 ./run_dev.bash 
+  844  02/01/20 16:47:54 sudo shutdown -h now
+  845  02/01/20 16:02:43 cd subt/docker/
+  846  02/01/20 16:02:46 ./run_dev.bash
+  847  02/01/20 16:20:45 tmux
+  848  02/01/20 16:25:51 tmux new -s husky
+  849  03/01/20 08:28:17 tmux
+  850  03/01/20 08:30:14 cd subt/docker/
+  851  03/01/20 08:30:17 ./run_dev.bash
+  852  03/01/20 08:31:20 cd subt/docker/
+  853  03/01/20 08:31:21 ls
+  854  03/01/20 08:32:02 cd autonomy/
+  855  03/01/20 08:32:03 ls
+  856  03/01/20 08:32:28 c ..
+  857  03/01/20 08:32:41 cd ..
+  858  03/01/20 08:32:48 cd docker_common/
+  859  03/01/20 08:33:08 ls
+  860  03/01/20 10:10:55 cd autonomy
+  861  03/01/20 08:29:15 cd subt/docker/
+  862  03/01/20 08:29:19 ./run_dev.bash
+  863  03/01/20 08:28:49 tmux new -s husky
+  864  03/01/20 10:11:44 sudo shutdown -h now
+  865  06/01/20 08:51:06 cd subt/docker/
+  866  06/01/20 08:51:08 ./run_dev.bash
+  867  06/01/20 09:14:45 rostopic list | grep cmd
+  868  06/01/20 09:15:05 rostopic list | grep cost
+  869  06/01/20 09:18:12 rqt graph
+  870  06/01/20 09:18:18 rqt_graph
+  871  06/01/20 09:19:37 rostopic echo /r2/costmap2d 
+  872  06/01/20 09:19:55 rostopic echo /r2/frontier
+  873  06/01/20 09:20:33 rostopic echo /r2/heightmap_to_costmap/costmap2d 
+  874  06/01/20 09:21:21 rostopic echo /r2/ohm/costarray 
+  875  06/01/20 09:21:34 rostopic echo /r2/ohm/costmap2d 
+  876  06/01/20 09:29:15 rostopic echo /r2/ohm/costarray
+  877  06/01/20 09:29:18 rostopic echo /r2/ohm/costmap2d 
+  878  06/01/20 09:29:32 rostopic info  /r2/ohm/costmap2d 
+  879  06/01/20 09:31:15 rostopic list
+  880  06/01/20 09:31:27 rostopic info  /r2/ohm/costmap2d 
+  881  06/01/20 08:50:12 cd subt/docker/
+  882  06/01/20 08:50:18 ./run_dev.bash
+  883  06/01/20 08:50:00 tmux
+  884  06/01/20 10:45:22 sudo shutdown -h now
+  885  07/01/20 10:35:26 ./run_dev.bash
+  886  07/01/20 10:40:32 cd ..
+  887  07/01/20 10:40:40 git status
+  888  07/01/20 10:43:53 p
+  889  07/01/20 10:45:19 ping 8.8.8.8
+  890  07/01/20 10:34:37 cd subt/docker/
+  891  07/01/20 10:34:56 x
+  892  07/01/20 10:35:13 tmux
+  893  07/01/20 12:22:05 ./run_dev.bash 
+  894  07/01/20 12:28:08 sudo shutdown -h now
+  895  07/01/20 10:51:46 pwd
+  896  07/01/20 10:51:51 ls
+  897  07/01/20 10:51:59 cd subt
+  898  07/01/20 10:52:04 git status
+  899  07/01/20 10:52:47 git diff HEAD
+  900  07/01/20 11:00:12 git status
+  901  07/01/20 11:05:17 git add src/subt_launch/config/husky/husky_behaviour_astar.yaml 
+  902  07/01/20 11:05:28 git status
+  903  07/01/20 11:06:04 git add .
+  904  07/01/20 11:06:08 git ststus
+  905  07/01/20 11:06:20 git status
+  906  07/01/20 11:06:53 git commit -m 'configuration file changes to make husky work'
+  907  07/01/20 11:07:19 git pull
+  908  07/01/20 11:11:06 ping 74.125.68.105
+  909  07/01/20 11:13:10 sudo systemctl status wifi_connect
+  910  07/01/20 11:13:33 ip a
+  911  07/01/20 11:13:47 ping 8.8.8.8
+  912  07/01/20 11:14:02 route -n
+  913  07/01/20 11:16:11 sudo route del -net 0.0.0.0 gw 192.168.2.1 netmask 0.0.0.0 dev eno1
+  914  07/01/20 11:16:19 ping 8.8.8.8
+  915  07/01/20 11:17:27 sudo route add -net 0.0.0.0 gw 140.253.22.1 netmask 0.0.0.0 dev wlp1s0
+  916  07/01/20 11:17:31 ping 8.8.8.8
+  917  07/01/20 11:21:08 ping 8.8.8.8
+  918  07/01/20 11:24:35 sudo systemctl status wifi_connect
+  919  07/01/20 11:25:21 git pull
+  920  07/01/20 11:26:25 ping 8.8.8.8
+  921  07/01/20 11:29:21 git status
+  922  07/01/20 11:29:44 git pull
+  923  07/01/20 11:30:35 ssh-keygen -t rsa
+  924  07/01/20 11:31:44 sudo gedit ~/.ssh/id_rsa.pub
+  925  07/01/20 11:32:01 sudo nano ~/.ssh/id_rsa.pub
+  926  07/01/20 11:34:30 ls
+  927  07/01/20 11:35:16 ls -lt
+  928  07/01/20 11:37:18 ssh-keygen
+  929  07/01/20 11:39:06 sudo nano ~/.ssh/id_rsa_gro166.pub
+  930  07/01/20 11:39:44 ls -lt
+  931  07/01/20 11:40:53 rm id_rsa_gro166.pub
+  932  07/01/20 11:40:55 ls
+  933  07/01/20 11:40:59 ls -lt
+  934  07/01/20 11:41:13 rm id_rsa_gro166.pub.pub
+  935  07/01/20 11:41:16 ls -lt
+  936  07/01/20 11:41:49 ssh-keygen -t rsa
+  937  07/01/20 11:42:43 sudo nano ~/.ssh/id_rsa_gro166.pub 
+  938  07/01/20 11:44:14 git pull
+  939  07/01/20 11:44:26 cd ~
+  940  07/01/20 11:44:30 cd subt/
+  941  07/01/20 11:44:33 git pull
+  942  07/01/20 11:45:13 git status
+  943  07/01/20 11:46:05 git pull
+  944  07/01/20 11:46:51 cd ~/.ssh/
+  945  07/01/20 11:46:56 ls -lt
+  946  07/01/20 11:47:31 ping 8.8.8.8
+  947  07/01/20 11:47:58 ls -lt
+  948  07/01/20 11:50:54 cd ~/subt/
+  949  07/01/20 11:50:58 git remote show origin
+  950  07/01/20 11:51:25 git config --get remote.origin.url
+  951  07/01/20 11:52:51 git pull
+  952  07/01/20 11:53:56 git ls-remote
+  953  07/01/20 11:54:21 git branch
+  954  07/01/20 11:58:33 ssh -T git@bitbucket.org
+  955  07/01/20 12:00:28 ssh-add -l
+  956  07/01/20 12:00:52 ping p2-xavier 
+  957  07/01/20 12:01:05 ping 8.8.8.8
+  958  07/01/20 12:02:11 sudo ssh-add -l
+  959  07/01/20 12:03:01 eval `ssh-agent -s`
+  960  07/01/20 12:03:11 ssh-add -l
+  961  07/01/20 12:04:46 $ ssh-add ~/.ssh/<private_key_file>
+  962  07/01/20 12:05:25 $ ssh-add ~/.ssh/id_rsa_gro166
+  963  07/01/20 12:05:31 ssh-add ~/.ssh/id_rsa_gro166
+  964  07/01/20 12:05:38 ssh-add -l
+  965  07/01/20 12:07:39 ssh -T git@bitbucket.org
+  966  07/01/20 12:07:49 git pull
+  967  07/01/20 12:11:08 git status
+  968  07/01/20 12:18:09 cd subt/docker/
+  969  07/01/20 12:18:48 cd ~/subt/docker/
+  970  07/01/20 12:18:50 ls
+  971  07/01/20 12:19:15 ./run_dev.bash
+  972  07/01/20 12:20:18 cd ..
+  973  07/01/20 12:20:19 ls
+  974  07/01/20 12:20:26 rm kg
+  975  07/01/20 12:20:28 ls
+  976  07/01/20 12:20:32 rm kg.pub 
+  977  07/01/20 12:20:33 ls
+  978  07/01/20 12:20:58 cd docker/
+  979  07/01/20 12:21:02 ls
+  980  07/01/20 12:21:07 tmux
+  981  07/01/20 13:45:22 ls
+  982  07/01/20 13:45:45 cd ~/subt/docker/
+  983  07/01/20 13:45:56 ./run_dev.bash
+  984  07/01/20 16:05:15 sudo shutdown -h now
+  985  07/01/20 14:55:52 fish
+  986  07/01/20 16:11:08 history
+  987  07/01/20 16:13:01 cd ~/subt/docker/
+  988  07/01/20 16:14:23 ./run_dev.bash 
+  989  07/01/20 16:18:31 sudo shutdown -h now
+  990  07/01/20 16:10:59 tmux
+  991  07/01/20 16:32:16 ping husky-ph
+  992  07/01/20 16:38:52 sudo shutdown -h now
+  993  07/01/20 16:21:19 cd subt/docker/
+  994  07/01/20 16:21:47 ./run_dev.bash 
+  995  07/01/20 16:45:41 cd subt/docker/
+  996  07/01/20 16:45:54 tmux
+  997  07/01/20 17:33:13 sudo shutdown -h now
+  998  08/01/20 08:59:45 history
+  999  08/01/20 09:09:43 if config
+ 1000  08/01/20 09:09:48 ifconfig
+ 1001  08/01/20 09:12:12 history
+

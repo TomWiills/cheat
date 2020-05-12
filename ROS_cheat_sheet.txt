@@ -1,0 +1,89 @@
+catkin_create_pkg my_package rospy
+
+roscd my_package
+mkdir launch
+touch launch/my_package_launch_file.launch
+
+roslaunch my_package my_package_launch_file.launch
+
+ls -la   							# check permissions
+chmod +x name_of_file.py					# change catkin_make
+
+catkin_make
+
+rospack profile
+
+rostopic list | grep  '/counter'
+rostopic info /counter
+rosmsg show sensor_msgs/JointState
+rostopic echo /rosout
+
+roswtf
+roswtf false_start_demo.launch
+
+
+roscd my_package
+
+rostopic pub /counter std_msgs/Int32 5
+
+rqt_plot
+rqt_graph
+
+------- ROS BAG-------
+rosbag record -O laser.bag laser_scan
+
+rosbag info laser.bag
+rosbag play -l laser.bag
+
+rosbag filter 2020-02-04-17-28-11.bag 2020-02-04-17-28-11_cut.bag "t.secs>=1580801311.98 and t.secs <= 1580801371.98"
+rosbag filter old_bag.bag new_bag.bag "topic == '/r2/heightmap_to_costmap/costmap2d' or topic == '/r2/slam/odom/high/pose'"
+
+----ROS SERVICE-----
+
+
+rosservice call /gazebo/pause_physics "{}"
+rosservice call /gazebo/unpause_physics "{}"
+
+rosservice list | grep execute_trajectory
+rosservice info /execute_trajectory
+rossrv show iri_wam_reproduce_trajectory/ExecTraj
+
+
+
+---------SSH----------
+SSHFS folder share command, [remote location] [local folder to mount]
+sshfs 192.168.0.83:/home/keir/catkin_ws ~/cat_sshmnt
+
+Then to unmount:
+fusermount -u ~/cat_sshmnt
+
+to ssh in with graphics
+ssh -X 192.168.0.83
+-------------
+
+
+open a file with default package
+xdg-open .bashrc
+
+
+-------TF---------
+
+rosrun rqt_tf_tree rqt_tf_tree
+
+rosrun tf view_frames
+
+rostopic echo -n2 /tf
+    
+rosrun tf tf_echo turtle1 turtle2     % transform between frames
+
+static_transform_publisher x y z yaw pitch roll frame_id child_frame_id period_in_ms
+
+------- MAPS --------
+
+rosrun map_server map_saver -f my_map     	% save a map
+
+rosrun map_server map_server map_file.yaml 	% load a map
+
+
+
+

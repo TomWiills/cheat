@@ -1,0 +1,556 @@
+This is the very beginning of your direct message history with @tmo
+keir groves  2:24 PM
+git submodule update --init --recursive
+Cloning into '/home/gro166/subt/src/darpa_subt_hexapod'...
+Repository not found
+The requested repository does not exist, or you do not have permission to access it.
+fatal: Could not read from remote repository.Please make sure you have the correct access rights
+and the repository exists.
+fatal: clone of 'ssh://git@bitbucket.csiro.au:7999/dsh/darpa_subt_hexapod.git' into submodule path '/home/gro166/subt/src/darpa_subt_hexapod' failed
+Failed to clone 'src/darpa_subt_hexapod'. Retry scheduled
+Cloning into '/home/gro166/subt/src/leg_go_ros'...
+Repository not found
+The requested repository does not exist, or you do not have permission to access it.
+fatal: Could not read from remote repository.Please make sure you have the correct access rights
+and the repository exists.
+fatal: clone of 'ssh://git@bitbucket.csiro.au:7999/leg/leg_go_ros.git' into submodule path '/home/gro166/subt/src/leg_go_ros' failed
+Failed to clone 'src/leg_go_ros'. Retry scheduled
+Cloning into '/home/gro166/subt/src/darpa_subt_hexapod'...
+Repository not found
+The requested repository does not exist, or you do not have permission to access it.
+fatal: Could not read from remote repository.Please make sure you have the correct access rights
+and the repository exists.
+fatal: clone of 'ssh://git@bitbucket.csiro.au:7999/dsh/darpa_subt_hexapod.git' into submodule path '/home/gro166/subt/src/darpa_subt_hexapod' failed
+Failed to clone 'src/darpa_subt_hexapod' a second time, aborting
+Tom Hines  2:25 PM
+ty
+keir groves  2:37 PM
+Should I have access to this now?
+Tom Hines  2:37 PM
+not yet hang on
+keir groves  2:37 PM
+Thanks
+keir groves  4:27 PM
+OK. So catkin make failed because of CMake Error at /opt/ros/melodic/share/catkin/cmake/catkin_workspace.cmake:95 (message):
+  This workspace contains non-catkin packages in it
+keir groves  4:35 PM
+it failed on ohm and abandoned some other stuff
+keir groves  5:14 PM
+Errors     << ohm:make /home/gro166/subt/logs/ohm/build.make.000.log
+/usr/bin/ld: cannot find -lGTest::Main
+collect2: error: ld returned 1 exit status
+make[2]: *** [bin/gputiltestocl] Error 1
+make[1]: *** [tests/gputiltest/CMakeFiles/gputiltestocl.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+make: *** [all] Error 2
+Tom Hines  5:14 PM
+hmm
+5:15
+you did the whole gtest thing?
+keir groves  5:15 PM
+yeah
+Tom Hines  5:15 PM
+like the
+
+cd /usr/src/gtest/build-aux
+sudo cmake ..
+sudo make
+sudo cp *.a /usr/lib
+
+bit too?
+keir groves  5:16 PM
+yeah
+Tom Hines  5:16 PM
+maybe try doing a catkin clean -y then a catkin build ohm
+5:16
+I'm not really sure though, that message should be resolved after doing the gtest thing
+5:17
+you have /usr/lib/libgtest.a and /usr/lib/libgtest_main.a?
+keir groves  5:19 PM
+gro166@hardware-ph:/usr/lib$ ls | grep libgtest
+libgtest.a
+libgtest_main.a
+5:20
+ohm build worked. one warning
+Tom Hines  5:20 PM
+great
+keir groves  11:30 AM
+Hi Tom, I finally got it all to build:man_dancing:
+11:30
+What's a good launch file to try for a single agent simulation?
+Tom Hines  11:31 AM
+Congratulations
+11:31
+subt_launch tunnel_simulation.launch
+keir groves  12:09 PM
+I have it running. Do you have some time this afternoon to show me how it works?
+Tom Hines  12:12 PM
+yeah
+keir groves  12:12 PM
+I cant get the robot to move. ohm mapping did die
+keir groves  2:44 PM
+OK, I havea moving robot!!! It's painfully slow though. Any ideas on how I might speed it up? Would putting the robot into a more basic world make it any faster?
+Tom Hines  2:45 PM
+it might but I would be surprised if it changes much
+2:45
+I'm not sure what other worlds we have
+keir groves  2:45 PM
+Is there anything rescouce heavy that I could kill?
+Tom Hines  2:46 PM
+possibly, you can run top or htop or something like that to see what the best candidates are
+keir groves  2:46 PM
+I was thinking one of the stock ones like playpen
+Tom Hines  2:46 PM
+the path to the world file is set in tunnel_simulation.launch so you can do that there I think
+keir groves  2:47 PM
+There seems to be some feature recognition stuff going on, purple dots, but I doubt thats to heavy?
+Tom Hines  2:47 PM
+yeah that's simulated, just detections when objects in gazebo get close enough
+keir groves  2:47 PM
+Ill try a different world and running gazebo without the gui
+keir groves  3:10 PM
+displaylinkmanager, vpnagentd, gzserver, gzclient are all really heavy
+Tom Hines  3:10 PM
+I don't know what the first 2 are
+3:10
+you definitely need gzserver
+3:10
+I can't remember if gzclient is just the gui or not though
+keir groves  3:10 PM
+gazebo?
+Tom Hines  3:10 PM
+might be unnecessary
+3:11
+yeah gzserver/gzclient are gazebo
+3:11
+are you using a vpn?
+3:11
+the displaylinkmanager is also suspicious
+3:12
+are you using a dock?
+keir groves  3:12 PM
+I dont think theres a vpn
+3:12
+yeah got a dock, three screens might be using a bit of juice
+Tom Hines  3:13 PM
+try sudo systemctl stop vpnagentd
+3:13
+yeah I think that displaylinkmanager is a dock thing
+3:13
+I know the linux software for my laptop's dock is garbage
+keir groves  3:14 PM
+hahaha
+keir groves  4:39 PM
+For future reference gzclient is the gui
+Tom Hines  4:40 PM
+cool
+4:40
+thanks
+keir groves  4:43 PM
+The simulation runs a bit better without the gazebo gui, with the dock unplugged and with that vpn thing killed
+Tom Hines  4:43 PM
+did changing the world help?
+keir groves  5:08 PM
+I'm just messing with that now
+keir groves  10:54 AM
+Hi Tom, I'm having trouble building ohm again.
+10:55
+this package doesn't like me
+Tom Hines  10:55 AM
+what's it say?
+keir groves  10:55 AM
+Errors     << ohm:make /home/gro166/subt/logs/ohm/build.make.000.log
+/opt/ros/melodic/lib/liblas.so: undefined reference to `boost::thread_detail::enter_once_region(boost::once_flag&)'
+/opt/ros/melodic/lib/liblas.so: undefined reference to `boost::thread_detail::commit_once_region(boost::once_flag&)'
+/opt/ros/melodic/lib/liblas.so: undefined reference to `boost::thread_detail::rollback_once_region(boost::once_flag&)'
+collect2: error: ld returned 1 exit status
+make[2]: *** [bin/ohmcloudfilter] Error 1
+make[1]: *** [utils/ohmcloudfilter/CMakeFiles/ohmcloudfilter.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+make: *** [all] Error 2
+Tom Hines  10:56 AM
+do you have pdal installed? (edited) 
+keir groves  10:56 AM
+not sure. I'll check
+Tom Hines  11:00 AM
+pdal provides las input and output
+11:00
+I think ohm will use it before liblas if it's available
+keir groves  11:33 AM
+I installed pdal and still get the same error
+Tom Hines  11:37 AM
+you have boost  1.65.1 installed right?
+11:37
+and wildcat 1:1.2.0-1444-g88a8025a-1
+11:38
+and libpdal-dev 1.6.0
+11:39
+and  no liblas (/opt/ros/melodic/lib/liblas.so should be from wildcat)
+keir groves  11:49 AM
+I think it was missing libpdal-dev
+keir groves  11:56 AM
+Ot of interest, what made you suspect that package?
+Tom Hines  11:58 AM
+las is a pointcloud file format, liblas is for las i/o, pdal also provides las i/o and I remember ohm having the option to choose what las i/o lib to use
+11:58
+I'm not sure if ohm uses boost
+11:58
+but if it does it must be a different one to what wildcat's liblas uses
+keir groves  2:07 PM
+OK, I think stuff has compiled right but the launch file isn't working.
+2:08
+I have open CL 2.1 installed. is that a problem?
+Tom Hines  2:08 PM
+see any errors?
+keir groves  2:08 PM
+It just hangs here:
+2:08
+Version: OpenCL 2.1 NEO
+[check_depends-2] process has finished cleanly
+log file: /home/gro166/.ros/log/27d146f4-1a39-11ea-b996-8cec4b9b110e/check_depends-2*.log
+[Err] [InsertModelWidget.cc:433] Missing model.config for model "/opt/ros/melodic/share/turtlebot3_gazebo/models/turtlebot3_autorace"
+[Err] [InsertModelWidget.cc:433] Missing model.config for model "/home/gro166/subt/src/gazebo_assets/models/ign"
+[Wrn] [Event.cc:61] Warning: Deleting a connection right after creation. Make sure to save the ConnectionPtr from a Connect call
+[WARN] [/r1/rotor_controller_spawner]: Controller Spawner couldn't find the expected controller_manager ROS interface.
+[WARN] [/r1/controller_spawner]: Controller Spawner couldn't find the expected controller_manager ROS interface.
+[r1/controller_spawner-33] process has finished cleanly
+log file: /home/gro166/.ros/log/27d146f4-1a39-11ea-b996-8cec4b9b110e/r1-controller_spawner-33*.log
+[r1/rotor_controller_spawner-27] process has finished cleanly
+log file: /home/gro166/.ros/log/27d146f4-1a39-11ea-b996-8cec4b9b110e/r1-rotor_controller_spawner-27*.log
+Tom Hines  2:09 PM
+did the gazebo loading screen open then just stay there?
+2:09
+if so check for something like "downloading models" in the logs
+keir groves  2:09 PM
+gazebo opens
+Tom Hines  2:10 PM
+what part of the launch file does not work?
+keir groves  2:12 PM
+No sure.
+2:12
+[Wrn] [Publisher.cc:141] Queue limit reached for topic /gazebo/tunnel_practice_2/user_camera/pose, deleting message. This warning is printed only once.
+2:13
+Now it's come up with this
+Tom Hines  2:13 PM
+if you do rosnode list
+2:13
+what nodes are running?
+keir groves  2:14 PM
+/DARPA_interface_load
+/gazebo_gui
+/h1/command_composer_node
+/h2/command_composer_node
+/multi_agent_interface
+/object_manager
+/r1/agent_interface
+/r1/agent_spawner
+/r1/behaviour_astar
+/r1/behaviour_compositor
+/r1/behaviour_done
+/r1/behaviour_joy
+/r1/behaviour_path_follow
+/r1/behaviour_stop
+/r1/command_composer_node
+/r1/comms_hardware_interface_node
+/r1/darpa_estop_state_pub
+/r1/executive_node
+/r1/frontier_3d_node
+/r1/joy
+/r1/local_nav_sensors
+/r1/map_odom_tf
+/r1/mesh_to_costmap2d
+/r1/motor_state_pub
+/r1/ohm_mapping
+/r1/ohm_nav_mesh_rviz
+/r1/robot_state_publisher
+/r1/rotor_rotator
+/r1/safety_node
+/r1/topometric_map_node
+/r1/topometric_waypoint_manager
+/r1/traversability
+/r1/wildcat_map
+/r1/wildcat_odom
+/r2/command_composer_node
+/r3/command_composer_node
+/r4/command_composer_node
+/r5/command_composer_node
+/r6/command_composer_node
+/rajant_reporter
+/rosout
+/surfel_meshing
+/topometric_map_node
+/wildcat_map
+Tom Hines  2:15 PM
+so it's just rviz that's not working?
+2:15
+any logs from rviz?
+keir groves  2:16 PM
+just a minute, I did a launch without rviz to see if that was th problem
+2:16
+/DARPA_interface_load
+/gazebo_gui
+/h1/command_composer_node
+/h2/command_composer_node
+/multi_agent_interface
+/object_manager
+/r1/agent_interface
+/r1/agent_spawner
+/r1/behaviour_astar
+/r1/behaviour_compositor
+/r1/behaviour_done
+/r1/behaviour_joy
+/r1/behaviour_path_follow
+/r1/behaviour_stop
+/r1/command_composer_node
+/r1/comms_hardware_interface_node
+/r1/darpa_estop_state_pub
+/r1/executive_node
+/r1/frontier_3d_node
+/r1/joy
+/r1/local_nav_sensors
+/r1/map_odom_tf
+/r1/mesh_to_costmap2d
+/r1/motor_state_pub
+/r1/ohm_mapping
+/r1/ohm_nav_mesh_rviz
+/r1/robot_state_publisher
+/r1/rotor_rotator
+/r1/safety_node
+/r1/topometric_map_node
+/r1/topometric_waypoint_manager
+/r1/traversability
+/r1/wildcat_map
+/r1/wildcat_odom
+/r2/command_composer_node
+/r3/command_composer_node
+/r4/command_composer_node
+/r5/command_composer_node
+/r6/command_composer_node
+/rajant_reporter
+/rosout
+/rviz_nav
+/surfel_meshing
+/topometric_map_node
+/wildcat_map
+2:17
+That's the standard launch
+Tom Hines  2:17 PM
+looks fine to me, what exactly is not working?
+keir groves  2:18 PM
+nothing in gazebo or rviz
+2:18
+[gazebo-3] process has died [pid 25850, exit code 255, cmd /opt/ros/melodic/lib/gazebo_ros/gzserver --verbose -e ode /home/gro166/subt/src/3rdparty/osrf_sim/subt_gazebo/worlds/tunnel_practice_2.world __name:=gazebo __log:=/home/gro166/.ros/log/8a5ef428-1a3a-11ea-b996-8cec4b9b110e/gazebo-3.log].
+log file: /home/gro166/.ros/log/8a5ef428-1a3a-11ea-b996-8cec4b9b110e/gazebo-3*.log
+Tom Hines  2:19 PM
+any logs from just before that?
+2:19
+from gazebo
+keir groves  2:19 PM
+[r1/rajant_reporter-7] process has died [pid 25862, exit code 1, cmd /home/gro166/subt/src/comms_reporter/rajant_reporter/src/sim_robot_rajant_reporter_node.py /tf:=tf /tf_static:=tf_static __name:=rajant_reporter __log:=/home/gro166/.ros/log/8a5ef428-1a3a-11ea-b996-8cec4b9b110e/r1-rajant_reporter-7.log].
+log file: /home/gro166/.ros/log/8a5ef428-1a3a-11ea-b996-8cec4b9b110e/r1-rajant_reporter-7*.log
+Tom Hines  2:20 PM
+yeah don't worry about anything with rajant or comms in its name
+2:20
+anything from gazebo?
+keir groves  2:20 PM
+Gazebo multi-robot simulator, version 9.11.0
+Copyright (C) 2012 Open Source Robotics Foundation.
+Released under the Apache 2 License.
+http://gazebosim.org[Wrn] [GuiIface.cc:202] g/gui-plugin is really loading a SystemPlugin. To load a GUI plugin please use --gui-client-plugin
+[ INFO] [/object_manager]: subscribing to objects from h1
+[DEBUG] [/r1/behaviour_path_follow]: Parameter 'behaviour_path_follow/dynamic_parameters/visualise_rate/min' successfully read from rosparam.
+[Err] [Master.cc:96] EXCEPTION: Unable to start server[bind: Address already in use]. There is probably another Gazebo process running.[Err] [Master.cc:96] EXCEPTION: Unable to start server[bind: Address already in use]. There is probably another Gazebo process running.[DEBUG] [/r1/behaviour_path_follow]: Parameter 'behaviour_path_follow/dynamic_parameters/debug_path_length/min' successfully read from rosparam.
+[DEBUG] [/r1/behaviour_path_follow]: Parameter 'behaviour_path_follow/dynamic_parameters/debug_path_curvature/min' successfully read from rosparam.
+[DEBUG] [/r1/behaviour_path_follow]: Parameter 'behaviour_path_follow/dynamic_parameters/debug_path_frequency/min' successfully read from rosparam.
+[DEBUG] [/r1/behaviour_path_follow]: Parameter 'behaviour_path_follow/dynamic_parameters/debug_path_amplitude/min' successfully read from rosparam.
+[gazebo-3] process has died [pid 25850, exit code 255, cmd /opt/ros/melodic/lib/gazebo_ros/gzserver --verbose -e ode /home/gro166/subt/src/3rdparty/osrf_sim/subt_gazebo/worlds/tunnel_practice_2.world __name:=gazebo __log:=/home/gro166/.ros/log/8a5ef428-1a3a-11ea-b996-8cec4b9b110e/gazebo-3.log].
+log file: /home/gro166/.ros/log/8a5ef428-1a3a-11ea-b996-8cec4b9b110e/gazebo-3*.log
+gazebosim.orggazebosim.org
+Gazebo
+The Gazebo robot simulation
+Tom Hines  2:21 PM
+[Err] [Master.cc:96] EXCEPTION: Unable to start server[bind: Address already in use]. There is probably another Gazebo process running.
+2:21
+do ps -eaf | grep -i gz
+2:21
+after you kill the roslaunch
+2:21
+as it says, there's probably still another gazebo process running
+2:22
+kill it and try again
+2:22
+might have to kill -9 it
+keir groves  2:22 PM
+gro166   11104     1  0 13:04 ?        00:00:00 sh -c gzserver --verbose -e ode /home/gro166/subt/src/3rdparty/osrf_sim/subt_gazebo/worlds/tunnel_practice_2.world -s /opt/ros/melodic/lib/libgazebo_ros_paths_plugin.so -s /opt/ros/melodic/lib/libgazebo_ros_api_plugin.so __name:=gazebo __log:=/home/gro166/.ros/log/f5029334-1a2b-11ea-b996-8cec4b9b110e/gazebo-3.log
+gro166   11105 11104 18 13:04 ?        00:14:17 gzserver --verbose -e ode /home/gro166/subt/src/3rdparty/osrf_sim/subt_gazebo/worlds/tunnel_practice_2.world -s /opt/ros/melodic/lib/libgazebo_ros_paths_plugin.so -s /opt/ros/melodic/lib/libgazebo_ros_api_plugin.so __name:=gazebo __log:=/home/gro166/.ros/log/f5029334-1a2b-11ea-b996-8cec4b9b110e/gazebo-3.log
+gro166   27588  2576  0 14:21 pts/0    00:00:00 grep --color=auto -i gz
+Tom Hines  2:22 PM
+kill that gzserver process
+keir groves  2:32 PM
+:ok_hand:
+2:32
+Nice one Tom
+Tom Hines  2:32 PM
+cool
+keir groves  2:33 PM
+It's a hell of a lot faster on this machine!!
+Tom Hines  2:33 PM
+I bet
+2:33
+dw if it's still not at real time factor of 1
+2:34
+I can't run it that fast either
+keir groves  2:39 PM
+its running at basically 1
+2:39
+The PC fan is getting pretty excited
+Tom Hines  10:15 AM
+I can get you husky today but I can't get you a pack
+Tom Hines  3:28 PM
+https://bitbucket.csiro.au/projects/CST/repos/hosts_master/browse
+keir groves  4:26 PM
+what's the password on husky computer?
+Tom Hines  4:26 PM
+ho-ho-ho
+keir groves  4:42 PM
+so if i ssh into husky the password is ho-ho-ho? for ssh do i need a username on husky? or just ssh 192.168.2.60
+Tom Hines  4:42 PM
+username is aslab
+keir groves  4:45 PM
+cheers i'm in
+keir groves  10:52 AM
+I got a wifi dongle and can ssh onto husky. I ran the launch file operations_station.launch but it failed. Am i missing any steps?
+Tom Hines  10:53 AM
+how did it fail?
+10:53
+any errors?
+keir groves  10:53 AM
+[mule-2] restarting process
+process[mule-2]: started with pid [11895]
+Traceback (most recent call last):
+  File "/home/gro166/subt/src/subt_launch/scripts/mule.py", line 37, in <module>
+    import zmq
+ImportError: No module named zmq
+[mule-2] process has died [pid 11895, exit code 1, cmd /home/gro166/subt/src/subt_launch/scripts/mule.py __name:=mule __log:=/home/gro166/.ros/log/f21205ee-21f9-11ea-bffc-8cec4b9b110e/mule-2.log].
+log file: /home/gro166/.ros/log/f21205ee-21f9-11ea-bffc-8cec4b9b110e/mule-2*.log
+Tom Hines  10:55 AM
+yep install python-zmq
+keir groves  10:57 AM
+ImportError: No module named zeroconf
+Tom Hines  10:57 AM
+python-zeroconf
+keir groves  11:01 AM
+Ok, I have rviz up but nothing's coming through
+11:02
+[INFO] [/mule]: Database 0.0B ()
+[ WARN] [/object_manager]: no agents in wildcat client.
+[ WARN] [/object_manager]: no agents in wildcat client.
+[ WARN] [/object_manager]: no agents in wildcat client.
+[ WARN] [/object_manager]: no agents in wildcat client.
+[ WARN] [/object_manager]: no agents in wildcat client.
+[INFO] [/mule]: Database 0.0B ()
+11:02
+I'm guessing this robot is r2?
+Tom Hines  11:06 AM
+yeah (edited) 
+11:06
+is the code on the robot running?
+keir groves  11:06 AM
+I haven't launched anything there
+keir groves  11:12 AM
+What do i need to install or launch on the robot?
+11:13
+I'm back in on ethernet
+Tom Hines  11:13 AM
+go to ~/subt/docker/
+11:13
+then run tmux so that you can reattach if your network goes down
+11:13
+then run ./run_dev.bash
+11:14
+then run roslaunch subt_launch autonomy.launch platform:=husky robot_name:=r2
+11:14
+hang on, I'll also need to reconfigure the pack a bit
+11:14
+well actually
+11:14
+you have to  do that since only you are connected
+11:14
+ssh to p2-xavier
+11:15
+then edit the file /etc/pack/pack.env I think
+11:15
+and change the WAIT line so that the --wait one is uncommented (edited) 
+11:15
+and the ROS_MASTER_URI line so that the husky-ph one is uncommented
+keir groves  11:17 AM
+what's the command to ssh onto p2-xavier
+Tom Hines  11:17 AM
+ssh aslab@p2-xavier
+keir groves  11:18 AM
+aha that makes sense.
+11:18
+all usernames are aslab?
+Tom Hines  11:18 AM
+most
+keir groves  11:32 AM
+while ssh'ed into the pack I keep getting warnings saying that there's no space left on device.
+11:32
+that normal?
+11:35
+PACK_NAME=p2
+#CHASSIS_NAME=husky
+CHASSIS_NAME=none
+VELODYNE_ADDRESS=192.168.2.31
+SLAM_DOCKER_IMAGE=docker-registry.it.csiro.au/pack/pack-slam-arm64:2.5.0-1731
+PERCEPTION_DOCKER_IMAGE=docker-registry.it.csiro.au/pack/pack-perception-arm64:$
+STORAGE_PATH=/ssd
+#ROS_MASTER_URI=http://r1-autonomy:11311
+ROS_MASTER_URI=http://localhost:11311
+NTP_SERVER=husky-ph
+BACKUP_NTP_SERVER=darpa-base
+LAUNCH_WAIT=--wait
+# LAUNCH_WAIT=
+# Agent name must also be set in /etc/pack/slam/agent.yaml
+AGENT_NAME=r2
+MULTIMASTER=true
+FRAMERATE=10
+# IMU_TYPE should be gx3 or cv5
+IMU_TYPE=cv5
+Tom Hines  11:36 AM
+no that's not normal, not sure why it's happened (edited) 
+11:36
+might be something that hamish was working on
+keir groves  11:37 AM
+I can't see ros_master_uri husky-ph line. Should i add it?
+Tom Hines  11:37 AM
+yeah
+keir groves  11:39 AM
+ROS_MASTER_URI=http://husky-ph:11311
+11:39
+like this
+Tom Hines  11:39 AM
+yeah should work
+11:39
+can you ping husky-ph from the xavier?
+keir groves  11:41 AM
+yep
+11:43
+Ok, I've modified that file on the pack now
+Tom Hines  11:43 AM
+do sudo systemctl restart pack on it
+keir groves  11:45 AM
+spinning stopped and started again
+11:45
+shall i do the launch on husky now?
+Tom Hines  11:45 AM
+yeah
+keir groves  11:52 AM
+root@husky-ph:~/catkin_ws# roslaunch subt_launch autonomy.launch platform:=husky robot_name:=r2
+... logging to /root/.ros/log/1424c1b4-2202-11ea-b3f9-003018a1ec94/roslaunch-husky-ph-136.log
+Checking log directory for disk usage. This may take awhile.
+Press Ctrl-C to interrupt
+Done checking log file disk usage. Usage is <1GB.RLException: error loading <rosparam> tag:
+        file does not exist [/root/catkin_ws/src/subt_launch/config/husky/husky_heightmap_to_costmap.yaml]
+XML is <rosparam command="load" file="$(arg config_heightmap_to_costmap)"/>
+The traceback for the exception was written to the log file

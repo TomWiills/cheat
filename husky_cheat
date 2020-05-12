@@ -1,0 +1,112 @@
+To run husky.
+
+-----------ssh in and open tmux-----------------
+ssh -A aslab@husky-ph 		# password ho-ho-ho -A gives you access to ssh keys for git
+tmux				# allows new tabs and reconnect if ssh drops - ive not worked out the second bit yet!!
+^b then c			# opens new tab 1
+^b then c			# opens new tab 2
+
+
+------------setup routes if needed-------------------------
+# you might neeed to setup the routes if you want to connect the wifi
+
+^b then 2			# moves to tab 2 - i use this tab for this kind of stuff
+ping 8.8.8.8			# ping google to see if you have internet
+sudo systemctl status wifi_connect
+				# a command tom hines ran to interrogate the wifi connection - i dont full understand this
+q				# quit the wifi_connect
+ip a				# another ip command that tom used
+
+# lookup ip routing table - example working table below
+route -n
+
+# this deletes a line from the table
+sudo route del -net 0.0.0.0 gw 192.168.2.1 netmask 0.0.0.0 dev eno1
+
+# this add the wifi connection line to the table				
+sudo route add -net 0.0.0.0 gw 140.253.22.1 netmask 0.0.0.0 dev wlp1s0
+
+# check the table again				
+route -n
+
+# ping google again - it should be up if the table's right
+ping 8.8.8.8
+
+-------------run autonomy on the robot-------------------1
+^b then 1			# move to tab 1 this is where we will run docker and launch ros from
+cd ~/subt/docker/		# docker container location
+./run_dev.bash			# This starts the docker container - "usually says DISPLAY is :84"
+roslaunch subt_launch autonomy.launch platform:=husky robot_name:=r2
+				# the launch file for husky
+
+
+----------run the operations station and local nav interfaces---------
+
+ctrl+shift+t			# open a new tab
+roslaunch subt_launch operations_station.launch
+				# launch the operations station
+ctrl+shift+t
+export ROS_MASTER_URI=http://husky-ph:11311
+				# sets the master for this local nav
+roslaunch subt_launch local_nav_rviz.launch robot_name:=r2
+				# launch the local nav interface
+
+
+
+--------------tmux commands--------------
+
+^d				# this exits tmux
+^b				# tmux prefix key - tmux will interpret the keystroke following the prefix as a tmux shortcut.
+^b [				# this gets you into scroll so you can use the arrow keys, mous or pgup pgdn
+q				# quit scroll
+^b then c			# opens new tab
+^b then 1			# moves to tab 1
+
+
+------------slam pack----------------
+ssh aslab@p2-xavier		# ssh into xavier
+
+To get into slam pack
+
+
+---------rqt reconfigure--------
+# kg dyn
+rad to cost gain  = 0.01
+
+# astar
+lethal = 95
+loop =  0.5
+replan = 2
+
+# behaviour compositor
+costmap topic = kg/costmap2d
+
+# decollide
+fatal value = 90
+
+# path follow
+cost threshold = 90
+
+# heightmap to costmap
+lwngth in = 9
+
+# ohm mapping
+heightmap clip box half = 8
+
+-------------ros bag----------------
+
+rosbag record /rad_G10_throttle /rad_array /r2/slam/odom/high/pose /r2/heightmap_to_costmap/costmap2d r2/kg/costmap2d /tf /r2/tf /r2/tf_static /r2/behaviour_path_follow/markers /r2/global_path /r2/behaviour_astar/visualisation_markers /r2/behaviour_compositor/active_behaviour /topometric_graph/agent_paths/r2 /topometric_graph/agent_vertex_shapes /r2/interactive_markers/update /r2/topometric_waypoint/goal /ohm_surfel_mesh /ohm_surfel_mesh_array /wildcat/global/map/frame_points
+
+-------- example of working ip routing table------------
+
+aslab@husky-ph:~/subt/docker$ route -n
+Kernel IP routing table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+0.0.0.0         140.253.22.1    0.0.0.0         UG    0      0        0 wlp1s0
+140.253.22.0    0.0.0.0         255.255.254.0   U     0      0        0 wlp1s0
+169.254.0.0     0.0.0.0         255.255.0.0     U     1000   0        0 enp3s0
+172.17.0.0      0.0.0.0         255.255.0.0     U     0      0        0 docker0
+192.168.1.0     0.0.0.0         255.255.255.0   U     0      0        0 enp3s0
+192.168.2.0     0.0.0.0         255.255.255.0   U     0      0        0 eno1
+aslab@husky-ph:~/subt/docker$ 
+
