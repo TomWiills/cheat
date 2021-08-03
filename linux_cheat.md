@@ -15,7 +15,7 @@ fusermount -u ~/cat_sshmnt
 ```
 to ssh in with graphics
 ```bash
-ssh -X 192.168.0.83
+ssh -X username@192.168.0.83
 ```
 ssh and allow keys to be used - good for git stuff
 ```bash
