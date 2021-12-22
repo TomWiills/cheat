@@ -21,7 +21,32 @@ git clone --recursive 'git@github.com:EEEManchester/mallard.git' ./src
 ```bash
 git submodule sync --recursive && git submodule update --recursive --init
 ```
+## ssh keys
+Generate a key
+```bash
+ssh-keygen -t ed25519 -C "your_email@example.com"
+```
+press enter to accept default location for key i.e. ~/.ssh
 
 
+Add SSH key to the ssh-agent:
+Start the ssh-agent in the background
+
+```bash
+eval "$(ssh-agent -s)"
+
+> Agent pid 59566
+```
+
+
+Add your SSH private key to the ssh-agent.
+
+```bash
+ssh-add ~/.ssh/id_ed25519
+```
+Now copy public key to github account. to display public key:
+```bash
+cat ~/.ssh/id_ed25519.pub 
+```
 
 
